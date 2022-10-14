@@ -4,7 +4,7 @@ autonumber
 
 "Attachment Uploader" -> "Attachment \n API" : **POST /attachment** : Dépot d'un fichier dans le body (binary) et \nmétadonnées de base dans les headers
 ... Upload du fichier ...
-"Attachment \n API" --> "Attachment Uploader" : **HTTP 201** avec url contenant l'id de l'attachment, la taille, etc
+"Attachment \n API" --> "Attachment Uploader" : **HTTP 201** avec url contenant l'id de l'attachment, etc
 "Attachment Uploader" -> "Attachment \n API" : **HEAD /attachment/{id}** : Récupération des métadonnées du fichier
 "Attachment \n API" --> "Attachment Uploader" : Renvoi des métadonnées dans les headers (url, type, longueur, nom)
 "Attachment Uploader" -> "Attachment \n API" : **GET /attachment/{id}** : Récupération du fichier (binary) et des métadonnées de base
