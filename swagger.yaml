@@ -22,11 +22,6 @@ paths:
               format: binary
               description: The attachment to upload
       parameters:
-        - name: Content-Length
-          required: true
-          in: header
-          schema:
-            type: integer
         - name: Content-Type
           required: true
           in: header
@@ -271,11 +266,13 @@ components:
           description: Application relevant detail, defined in the API or a common list.
         reason:
           type: string
-          description: Explanation of the reason for the error which can be shown to a
+          description:
+            Explanation of the reason for the error which can be shown to a
             client user.
         message:
           type: string
-          description: More details and corrective actions related to the error which can
+          description:
+            More details and corrective actions related to the error which can
             be shown to a client user.
         status:
           type: string
@@ -290,7 +287,8 @@ components:
         "@schemaLocation":
           type: string
           format: uri
-          description: A URI to a JSON-Schema file that defines additional attributes and
+          description:
+            A URI to a JSON-Schema file that defines additional attributes and
             relationships
         "@type":
           type: string
